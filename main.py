@@ -21,12 +21,16 @@ window = tkinter.Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 
+# timer heading
+timer_heading = tkinter.Label(text="Timer", font=(FONT_NAME, 35, "bold"), fg=GREEN, bg=YELLOW)
+timer_heading.grid(row=0, column=1)
+
 # create canvas for the image
 canvas = tkinter.Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = tkinter.PhotoImage(file="tomato.png")
 canvas.create_image(100, 110, image=tomato_img)
 canvas.create_text(108, 138, text="00:00", fill="white", font=(FONT_NAME, 25, "bold"))
-canvas.grid(row=2, column=1)
+canvas.grid(row=1, column=1)
 
 # keep windown open
 window.mainloop()
